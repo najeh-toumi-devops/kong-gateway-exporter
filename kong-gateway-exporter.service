@@ -1,0 +1,14 @@
+[Unit]
+Description=Kong Gateway Exporter
+After=network.target
+
+[Service]
+User=kong
+Group=kong
+ExecStart=/usr/local/bin/kong-gateway-exporter --kong-url=http://localhost:8001 --port=9542
+Restart=always
+RestartSec=5
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
