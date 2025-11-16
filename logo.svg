@@ -3,7 +3,7 @@
     <style>
       .kong-bg { fill: #0066cc; }
       .kong-circle { fill: #00ccff; }
-      .kong-text { font-family: Arial, sans-serif; font-size: 120px; font-weight: bold; fill: white; text-anchor: middle; }
+      .kong-text { font-family: Arial, sans-serif; font-size: 100px; font-weight: bold; fill: white; text-anchor: middle; }
       .kong-label { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: white; text-anchor: middle; }
       .metric-bar { fill: #00ff00; }
       .metric-bar2 { fill: #ff8800; }
@@ -17,8 +17,8 @@
   <!-- Main circle -->
   <circle class="kong-circle" cx="128" cy="128" r="100"/>
   
-  <!-- Kong K letter -->
-  <text class="kong-text" x="128" y="155">K</text>
+  <!-- Kong KG letters -->
+  <text class="kong-text" x="128" y="155">KG</text>
   
   <!-- Top metrics bars -->
   <rect class="metric-bar" x="80" y="20" width="12" height="30" rx="3"/>
