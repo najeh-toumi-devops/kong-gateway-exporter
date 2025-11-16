@@ -23,5 +23,5 @@
   </g>
   
   <!-- Text label -->
-  <text x="100" y="195" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#0099ff" text-anchor="middle">EXPORTER</text>
+  <text x="100" y="195" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">EXPORTER</text>
 </svg>
