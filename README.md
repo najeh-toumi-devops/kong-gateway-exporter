@@ -1,6 +1,6 @@
 # Kong Gateway Exporter
 
-![Logo](logo.svg)
+![Logo](logo.png)
 
 **Développé par : Najeh TOUMI**  
 **Date : Novembre 2025**  
