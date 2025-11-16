@@ -37,7 +37,7 @@ Kong Gateway Exporter permet de :
 ```bash
 sudo apt update
 sudo apt install -y golang
-git clone https://github.com/NajehToumi/kong-gateway-exporter.git
+git clone https://github.com/najeh-toumi-devops/kong-gateway-exporter.git
 cd kong-gateway-exporter
 go build -o kong-gateway-exporter main.go
 sudo mv kong-gateway-exporter /usr/local/bin/
