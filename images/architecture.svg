@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <!-- Title -->
+  <text x="450" y="25" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">
+    Kong Gateway Exporter Architecture
+  </text>
+  
+  <!-- Kong Gateway Box -->
+  <rect x="50" y="80" width="150" height="100" fill="#0066cc" stroke="#003366" stroke-width="2" rx="5"/>
+  <text x="125" y="120" font-size="14" font-weight="bold" fill="white" text-anchor="middle">
+    Kong Gateway
+  </text>
+  <text x="125" y="145" font-size="11" fill="white" text-anchor="middle">
+    Admin API
+  </text>
+  <text x="125" y="165" font-size="10" fill="#ccff00" text-anchor="middle">
+    :8001
+  </text>
+  
+  <!-- Exporter Box -->
+  <rect x="300" y="80" width="150" height="100" fill="#ff6600" stroke="#cc3300" stroke-width="2" rx="5"/>
+  <text x="375" y="120" font-size="14" font-weight="bold" fill="white" text-anchor="middle">
+    Kong Exporter
+  </text>
+  <text x="375" y="145" font-size="11" fill="white" text-anchor="middle">
+    (Go)
+  </text>
+  <text x="375" y="165" font-size="10" fill="#ccff00" text-anchor="middle">
+    :9542/metrics
+  </text>
+  
+  <!-- Prometheus Box -->
+  <rect x="550" y="80" width="150" height="100" fill="#aa00ff" stroke="#660099" stroke-width="2" rx="5"/>
+  <text x="625" y="120" font-size="14" font-weight="bold" fill="white" text-anchor="middle">
+    Prometheus
+  </text>
+  <text x="625" y="145" font-size="11" fill="white" text-anchor="middle">
+    Time Series DB
+  </text>
+  <text x="625" y="165" font-size="10" fill="#ccff00" text-anchor="middle">
+    :9090
+  </text>
+  
+  <!-- Grafana Box -->
+  <rect x="700" y="80" width="150" height="100" fill="#00aa00" stroke="#006600" stroke-width="2" rx="5"/>
+  <text x="775" y="120" font-size="14" font-weight="bold" fill="white" text-anchor="middle">
+    Grafana
+  </text>
+  <text x="775" y="145" font-size="11" fill="white" text-anchor="middle">
+    Visualization
+  </text>
+  <text x="775" y="165" font-size="10" fill="#ccff00" text-anchor="middle">
+    :3000
+  </text>
+  
+  <!-- Arrows -->
+  <!-- Kong -> Exporter -->
+  <line x1="200" y1="130" x2="300" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="250" y="115" font-size="10" fill="#333" text-anchor="middle">scrapes</text>
+  
+  <!-- Exporter -> Prometheus -->
+  <line x1="450" y1="130" x2="550" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="500" y="115" font-size="10" fill="#333" text-anchor="middle">exports</text>
+  
+  <!-- Prometheus -> Grafana -->
+  <line x1="700" y1="130" x2="700" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="690" y="115" font-size="10" fill="#333" text-anchor="middle">queries</text>
+  
+  <!-- Data Flow Line -->
+  <line x1="625" y1="180" x2="625" y2="240" stroke="#666" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Deployment Options -->
+  <text x="75" y="290" font-size="12" font-weight="bold" fill="#333">
+    Deployment Options:
+  </text>
+  
+  <!-- VM Option -->
+  <rect x="50" y="310" width="120" height="70" fill="#e6f2ff" stroke="#0066cc" stroke-width="1" rx="3"/>
+  <text x="110" y="330" font-size="11" font-weight="bold" fill="#0066cc" text-anchor="middle">
+    VM (Debian)
+  </text>
+  <text x="110" y="350" font-size="9" fill="#333" text-anchor="middle">
+    systemd service
+  </text>
+  <text x="110" y="365" font-size="9" fill="#333" text-anchor="middle">
+    Binary: /usr/local/bin/
+  </text>
+  
+  <!-- Docker Option -->
+  <rect x="220" y="310" width="120" height="70" fill="#ffe6f2" stroke="#ff6600" stroke-width="1" rx="3"/>
+  <text x="280" y="330" font-size="11" font-weight="bold" fill="#ff6600" text-anchor="middle">
+    Docker
+  </text>
+  <text x="280" y="350" font-size="9" fill="#333" text-anchor="middle">
+    Container image
+  </text>
+  <text x="280" y="365" font-size="9" fill="#333" text-anchor="middle">
+    Docker Compose
+  </text>
+  
+  <!-- Kubernetes Option -->
+  <rect x="390" y="310" width="120" height="70" fill="#f2ffe6" stroke="#00aa00" stroke-width="1" rx="3"/>
+  <text x="450" y="330" font-size="11" font-weight="bold" fill="#00aa00" text-anchor="middle">
+    Kubernetes
+  </text>
+  <text x="450" y="350" font-size="9" fill="#333" text-anchor="middle">
+    Deployment/Pod
+  </text>
+  <text x="450" y="365" font-size="9" fill="#333" text-anchor="middle">
+    Helm Charts
+  </text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
